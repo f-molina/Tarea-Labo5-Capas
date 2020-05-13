@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Carnet</th>
+            <th>Carrera</th>
+        </thead>
+        <th:block th:each="estudiante, row:${estudiantes}">
+            <tr>
+                <th th:text="${estudiante.codigoUsuario}"/>
+                <th th:text="${estudiante.nombre}"/>
+                <th th:text="${estudiante.apellido}"/>
+                <th th:text="${estudiante.carnet}"/>
+                <th th:text="${estudiante.carrera}"/>
+            </tr>
+        </th:block>
+    </table>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
